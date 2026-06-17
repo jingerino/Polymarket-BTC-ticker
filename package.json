@@ -1,0 +1,22 @@
+{
+  "name": "polymarket-btc-ticker",
+  "version": "1.0.0",
+  "description": "Live terminal ticker for Polymarket's BTC Up/Down 5-minute prediction market",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "btc-ticker": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "demo": "node src/index.js --demo",
+    "test": "node test/offline.test.js && node test/http.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "license": "MIT"
+}
