@@ -88,3 +88,4 @@ test/
 Right now it follows the one market (BTC, 5-minute), but the asset, symbols and window length all live in config, and the renderer builds each frame from a plain snapshot, so adding ETH or a 15-minute variant, or showing a few panels side by side is mostly wiring rather than new logic. To watch a lot of markets at once I'd switch the per-tick order-book GETs over to the CLOB batch endpoint and the market-channel socket. As it stands the load is tiny: roughly two order-book requests a second plus the single socket, and Gamma only gets hit once per window.
 
 The one rough edge worth flagging: the HTTP price-to-beat endpoint I use as a fallback is documented for equity markets, so I'm not fully certain it serves crypto slugs. In practice maybe it doesn't matter much (i think), since the WebSocket capture gives an exact price-to-beat from the next window boundary regardless, but it's the piece I'm least sure about.
+# Polymarket-BTC-ticker
